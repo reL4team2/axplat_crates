@@ -28,6 +28,6 @@ pub trait Sel4TaskIf {
     /// Stops the seL4 task with the given ID.
     fn stop_task(task_id: usize);
 
-    /// Checks if the seL4 task with the given ID is the initial task.
-    fn is_init_task(task_id: usize) -> bool;
+    /// Checks if the current task is the initial task.
+    fn is_init_task() -> bool;
 }
