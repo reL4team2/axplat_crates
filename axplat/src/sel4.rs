@@ -31,3 +31,8 @@ pub trait Sel4TaskIf {
     /// Checks if the current task is the initial task.
     fn is_init_task() -> bool;
 }
+
+#[def_plat_interface]
+pub trait Sel4EventIf {
+    fn handler(cpu_id: usize) -> !;
+}
