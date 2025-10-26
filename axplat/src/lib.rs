@@ -11,6 +11,8 @@ pub mod init;
 pub mod irq;
 pub mod mem;
 pub mod power;
+#[cfg(feature = "onsel4")]
+pub mod sel4;
 pub mod time;
 
 pub use axplat_macros::main;
