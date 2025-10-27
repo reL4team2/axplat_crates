@@ -36,3 +36,15 @@ pub trait Sel4TaskIf {
 pub trait Sel4EventIf {
     fn handler(cpu_id: usize) -> !;
 }
+
+#[def_plat_interface]
+pub trait Sel4IrqIf {
+    /// Disables IRQs.
+    fn disable_irqs();
+
+    /// Enables IRQs.
+    fn enable_irqs();
+
+    /// Checks if IRQs are enabled.
+    fn irqs_enabled() -> bool;
+}
