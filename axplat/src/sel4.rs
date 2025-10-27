@@ -37,6 +37,7 @@ pub trait Sel4EventIf {
     fn handler(cpu_id: usize) -> !;
 }
 
+#[cfg(feature = "irq")]
 #[def_plat_interface]
 pub trait Sel4IrqIf {
     /// Disables IRQs.
